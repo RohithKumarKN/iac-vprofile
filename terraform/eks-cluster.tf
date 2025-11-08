@@ -9,9 +9,10 @@ module "eks" {
   subnet_ids                     = module.vpc.private_subnets
   cluster_endpoint_public_access = true
 
+  # Remove the custom AMI from defaults - let EKS use the optimized AMI
   eks_managed_node_group_defaults = {
-    ami_id = "ami-0260860c9bc4722d8"
-
+    # ami_id = "ami-0260860c9bc4722d8"  # Remove this line
+    ami_type = "AL2_x86_64" # Use EKS-optimized Amazon Linux 2
   }
 
   eks_managed_node_groups = {
