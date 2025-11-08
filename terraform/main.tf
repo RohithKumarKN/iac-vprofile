@@ -13,4 +13,3 @@ locals {
   cluster_name = var.clusterName
 }
 
-#Tagging all resources#
