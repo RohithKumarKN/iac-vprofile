@@ -63,8 +63,8 @@ jobs:
         continue-on-error: true
 
       - name: Terraform plan status
-        if: steps.plan.outcome == 'failure' 
-        run: exit 1     
+        if: steps.plan.outcome == 'failure'
+        run: exit 1
 
       - name: Terraform Apply
         id: apple
@@ -74,7 +74,7 @@ jobs:
       - name: Get Kube config file
         id: getconfig
         if: steps.apple.outcome == 'success'
-        run: aws eks update-kubeconfig --region ${{ env.AWS_REGION }} --name ${{ env.EKS_CLUSTER }} 
+        run: aws eks update-kubeconfig --region ${{ env.AWS_REGION }} --name ${{ env.EKS_CLUSTER }}
 
       - name: Install Ingress controller
         if: steps.apple.outcome == 'success' && steps.getconfig.outcome == 'success'
