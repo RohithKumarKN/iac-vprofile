@@ -10,7 +10,7 @@ module "eks" {
   cluster_endpoint_public_access = true
 
   eks_managed_node_group_defaults = {
-    ami_type = "ami-0260860c9bc4722d8"
+    ami_id = "ami-0260860c9bc4722d8"
 
   }
 
