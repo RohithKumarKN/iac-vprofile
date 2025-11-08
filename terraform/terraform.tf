@@ -27,7 +27,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "gitopsterrastateapp-deployment-rohith"
+    bucket = "app-deployment-rohith"
     key    = "terraform.tfstate"
     region = "ap-south-1"
   }
