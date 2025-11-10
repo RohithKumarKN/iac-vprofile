@@ -30,7 +30,8 @@ terraform {
     bucket = "app-deployment-rohith"
     key    = "terraform.tfstate"
     region = "ap-south-1"
+    state_lock_table = "terraform-lock-table-rohith"
   }
 
-  required_version = "~> 1.6.3"
+  required_version = "~> 1.13.0"
 }
