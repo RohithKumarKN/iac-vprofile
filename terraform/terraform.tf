@@ -27,9 +27,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "app-deployment-rohith"
-    key    = "terraform.tfstate"
-    region = "ap-south-1"
+    bucket           = "app-deployment-rohith"
+    key              = "terraform.tfstate"
+    region           = "ap-south-1"
     state_lock_table = "terraform-lock-table-rohith"
   }
 
