@@ -33,6 +33,6 @@ terraform {
     state_lock_table = "terraform-lock-table-rohith"
   }
 
-  required_version = "~> 1.13.0"
+  required_version = "~> 1.6.0"
 }
 
